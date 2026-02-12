@@ -1,0 +1,55 @@
+---
+title: airmon
+description: Viper command
+sidebar:
+    order: 45
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Puts network card into monitor mode.
+
+```bash
+airmon (START/STOP) [NETDEVICE]
+```
+
+### Arguments
+- (START) -- enables monitor mode for the network interface
+- (STOP) -- disables monitor mode for the network interface
+- NETDEVICE -- specify the network interface asually `wlan0`
+
+### Examples
+<Tabs>
+  <TabItem label="No arguments">
+    ```bash
+    airmon
+    ```
+    Result:
+    ```
+    wlan0 238 False
+    ```
+  </TabItem>
+
+  <TabItem label="start">
+    ```bash
+    airmon start wlan0
+    ```
+    Result:
+    ```
+    Interface  Chipset  Monitor_Mode  
+    wlan0      238      True
+    ```
+  </TabItem>
+
+  <TabItem label="stop">
+    ```bash
+    airmon stop wlan0
+    ```
+    Result:
+    ```
+    Interface  Chipset  Monitor_Mode  
+    wlan0      238      False
+    ```
+  </TabItem>
+</Tabs>

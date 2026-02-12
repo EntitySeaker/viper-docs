@@ -1,0 +1,40 @@
+---
+title: mv
+description: Viper command
+sidebar:
+    order: 22
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Aside type="tip">The mv command can also change the name of a file.</Aside>
+
+### Purpose
+Moves a file or directory.
+
+```bash
+mv [PATH] [DESTPATH]
+```
+
+### Arguments
+- PATH -- specify the path to the file you want to move
+- DESTPATH -- specify the path to the directory you want to move the file to
+
+### Examples
+<Tabs>
+  <TabItem label="Move a file">
+    ```bash
+    mv /home/volk/someFile /home/volk/files
+    ```
+    Result:  
+    *Moves `someFile` to `/home/volk/files`*
+  </TabItem>
+  <TabItem label="Rename a file">
+    ```bash
+    mv /home/volk/someFile /home/volk/renamed
+    ```
+    Result:  
+    *Renames `someFile` to `renamed`.*
+  </TabItem>
+</Tabs>

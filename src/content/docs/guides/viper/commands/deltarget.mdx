@@ -1,0 +1,41 @@
+---
+title: deltarget
+description: Viper command
+sidebar:
+    order: 9
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Deletes a target from the targets list.
+
+```bash
+deltarget [INDEX]
+```
+
+### Arguments
+- INDEX -- the index of the session found by using the [targets](/guides/viper/commands/targets/) command
+
+### Examples
+```bash
+deltarget 0
+```
+Results:
+<Tabs>
+  <TabItem label="Before">
+    ```
+    INDEX  USER     PUBLICIP        LANIP         OBJECT
+    -----  ----     --------        -----         ------
+    0      volk     215.250.95.157  192.168.0.19  computer
+    1      volk     215.250.95.157  192.168.0.19  file
+    ```
+  </TabItem>
+  <TabItem label="After">
+    ```
+    INDEX  USER     PUBLICIP        LANIP         OBJECT
+    -----  ----     --------        -----         ------ 
+    0      volk     215.250.95.157  192.168.0.19  file
+    ```
+  </TabItem>
+</Tabs>

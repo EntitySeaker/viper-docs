@@ -1,0 +1,26 @@
+---
+title: ssh
+description: Viper command
+sidebar:
+    order: 50
+---
+
+### Purpose
+Connects to a service using ssh.
+
+```bash
+ssh [USER@PASSWORD] [IP] (PORT)
+```
+
+### Arguments
+- USER -- specify the user you want to connect as
+- PASSWORD -- specify the password of the user
+- IP -- specify the IP of the server
+- (PORT) -- by default ssh tries to connect to port 22, specify a port if the ssh serverice is not on port 22
+
+### Examples
+```bash
+ssh root@password 177.58.127.159 22
+```
+Result:  
+*Connects to a machine using ssh.*

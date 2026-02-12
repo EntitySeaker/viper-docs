@@ -1,0 +1,27 @@
+---
+title: addvar
+description: Viper command
+sidebar:
+    order: 43
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Adds a variable to the list of variables.
+
+```bash
+addvar [KEY] [VAL]
+```
+
+### Arguments
+- KEY -- choose a name for your variable
+- VAL -- choose the value of the variable
+
+### Examples
+```bash
+addvar ip 177.58.127.159
+```
+Results:  
+*Added a new variable of "ip" with "177.58.127.159" as it's value.*  
+*Using "ip" will now translate to "177.58.127.159"*

@@ -1,0 +1,40 @@
+---
+title: secure
+description: Viper command
+sidebar:
+    order: 41
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="danger">This action is irrevertable, and -server should never be used on a home system. It will completely lock down the filesystem.</Aside>
+
+### Purpose
+Secures the filesystem.
+
+```bash
+secure [-home/-server]
+```
+
+### Arguments
+- -home -- secures the filesystem less agressively meant for home pcs
+- -server -- secures the filesystem of a server by locking down all the permissions to root
+
+### Examples
+<Tabs>
+  <TabItem label="-home">
+    ```bash
+    secure -home
+    ```
+    Result:  
+    *Secured the filesystem while allowing the user to execute some software*
+  </TabItem>
+  <TabItem label="-server">
+    ```bash
+    secure -server
+    ```
+    Result:  
+    *Secured the filesystem by locking down all the permissions to root*
+  </TabItem>
+</Tabs>

@@ -1,0 +1,41 @@
+---
+title: getlib
+description: Viper command
+sidebar:
+    order: 61
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Aside type="note">All libraries are imported with the permissions of the user that imported the libraries, for maximum permissions import as root.</Aside>
+
+### Purpose
+Imports a library.
+
+```bash
+getlib [PATH] (JUMPPATH)
+```
+
+### Arguments
+- PATH -- specify the path to the library
+- (JUMPPATH) -- specify the path to the jumpfile
+
+### Examples
+<Tabs>
+  <TabItem label="Without jumpfile">
+    ```bash
+    getlib /lib/metaxploit.so
+    ```
+    Result:  
+    *Library "metaxploit.so" has been imported from the host.*
+  </TabItem>
+  
+  <TabItem label="With jumpfile">
+    ```bash
+    getlib /lib/metaxploit.so /home/guest/jumpfile
+    ```
+    Result:  
+    *Library "metaxploit.so" has been imported from a remote machine.*
+  </TabItem>
+</Tabs>

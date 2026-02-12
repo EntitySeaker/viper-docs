@@ -1,0 +1,41 @@
+---
+title: jump
+description: Viper command
+sidebar:
+    order: 52
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="tip">For operational security it's best practice to always provide a custom name for the jumpfile.</Aside>
+
+### Purpose
+Creates a jumpfile, the jumpfile is used to transfer [general](https://documentation.greyscript.org/#GENERAL) objects that are otherwise impossible to get.
+
+```bash
+jump [PATH] (NAME)
+```
+
+### Arguments
+- PATH -- specify the directory you want the jumpfile to be created in.
+- (NAME) -- specify the name of the jumpfile, by default this is "jumpfile"
+
+### Examples
+<Tabs>
+  <TabItem label="Without custom name">
+    ```bash
+    jump /home/guest
+    ```
+    Result:  
+    *Created a jumpfile inside `/home/guest` with the name "jumpfile"*
+  </TabItem>
+  
+  <TabItem label="With custom name">
+    ```bash
+    jump /home/guest Mail.txt
+    ```
+    Result:  
+    *Created a jumpfile inside `/home/guest` with the name "Mail.txt"*
+  </TabItem>
+</Tabs>

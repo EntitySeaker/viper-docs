@@ -1,0 +1,29 @@
+---
+title: msfvenom
+description: Viper command
+sidebar:
+    order: 53
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">A reverse shell is always started from the selected metaxploit.so library, which can be selected using the uselib command.</Aside>
+
+### Purpose
+Starts a reverse shell.
+
+```bash
+msfvenom [IP] [PORT] [PROC]
+```
+
+### Arguments
+- IP -- specify the IP you want the reverse shell to connect back to
+- PORT -- specify a port you want to reverse shell to connect back to
+- PROC -- specify the process name of the reverse shell
+
+### Examples
+```bash
+msfvenom 177.58.127.159 1222 not_suspecious
+```
+Result:  
+*Started a reverse shell that connects back to "177.58.127.159" on port "1222" with name "not_suspecious"*

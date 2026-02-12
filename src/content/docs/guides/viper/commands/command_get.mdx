@@ -1,0 +1,24 @@
+---
+title: get
+description: Viper command
+sidebar:
+    order: 38
+---
+
+### Purpose
+Downloads a file.
+
+```bash
+get [REMPATH] [DESTPATH]
+```
+
+### Arguments
+- REMPATH -- specify the path of the file you want to download from the remote
+- DESTPATH -- specify the path of the file or directory on your host
+
+### Examples
+```bash
+get /var/system.log /home/volk/logs
+```
+Result:  
+*Downloaded the `system.log` file to `/home/volk/logs`.*

@@ -1,0 +1,39 @@
+---
+title: chown
+description: Viper command
+sidebar:
+    order: 30
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Changes the owner of a directory or file.
+
+```bash
+chown (-R) [OWNER] [PATH]
+```
+
+### Arguments
+- (-R) -- enables recursion mode
+- OWNER -- the new owner of the specified file or directory
+- PATH -- the path to the file or directory to change the permissions
+
+### Examples
+<Tabs>
+  <TabItem label="Non recursion mode">
+    ```bash
+    chown volk /home/volk
+    ```
+    Result:  
+    *Set the new owner of `/home/volk` to "volk".*
+  </TabItem>
+  
+  <TabItem label="Recursion mode">
+    ```bash
+    chown -R volk /home/volk
+    ```
+    Result:  
+    *Set the new owner of `/home/volk` to "volk", and all files and directories inside this folder.*
+  </TabItem>
+</Tabs>

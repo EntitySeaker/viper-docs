@@ -1,0 +1,37 @@
+---
+title: kill
+description: Viper command
+sidebar:
+    order: 21
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Kills a process.
+
+```bash
+kill [PID/ALL]
+```
+
+### Arguments
+- PID -- specify the programs process ID (PID) you want to close. You can use the [ps](/guides/viper/commands/ps/) command to show all running processes
+- ALL -- close all running programs
+
+### Examples
+<Tabs>
+  <TabItem label="Kill by PID">
+    ```bash
+    kill 2050
+    ```
+    Result:  
+    *The program with process ID 2050 has been closed.*
+  </TabItem>
+  <TabItem label="Kill all programs">
+    ```bash
+    kill all
+    ```
+    Result:  
+    *All running programs have been closed.*
+  </TabItem>
+</Tabs>

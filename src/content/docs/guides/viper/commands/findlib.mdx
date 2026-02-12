@@ -1,0 +1,33 @@
+---
+title: findlib
+description: Viper command
+sidebar:
+    order: 56
+---
+
+### Purpose
+Scans greyhack for a library.
+
+```bash
+findlib [LIB] [VERSION]
+```
+
+### Arguments
+- LIB -- the library type you want to find ex: "http"
+- VERSION -- the version of the library you want to find ex: "1.0.0"
+
+### Examples
+```bash
+findlib ftp 1.0.0
+```
+Results:  
+```
+Searching for library ftp 1.0.0...
+employees 1.0.0
+http 1.0.0
+ssh 1.0.0
+ 
+Library found!
+IP containing service ftp 1.0.0 found at ip: 18.22.134.223
+Tried 1 times. Spent 1.033475 seconds.
+```

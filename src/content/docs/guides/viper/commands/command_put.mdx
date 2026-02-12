@@ -1,0 +1,24 @@
+---
+title: put
+description: Viper command
+sidebar:
+    order: 39
+---
+
+### Purpose
+Uploads a file.
+
+```bash
+put [HOSTPATH] [DESTPATH]
+```
+
+### Arguments
+- HOSTPATH -- specify the file to upload on your host
+- DESTPATH -- specify where to upload the file on the remote
+
+### Examples
+```bash
+put /var/system.log /home/guest/logs
+```
+Result:  
+*Uploaded the `system.log` file to `/home/guest/logs`.*

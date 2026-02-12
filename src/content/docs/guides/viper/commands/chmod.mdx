@@ -1,0 +1,39 @@
+---
+title: chmod
+description: Viper command
+sidebar:
+    order: 29
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Changes the permissions of a directory or file.
+
+```bash
+chmod (-R) [PERMS] [PATH]
+```
+
+### Arguments
+- (-R) -- enables recursion mode
+- PERMS -- the permissions you want to add or subtract ex: o-rwx
+- PATH -- the path to the file or directory to change the permissions
+
+### Examples
+<Tabs>
+  <TabItem label="Non recursion mode">
+    ```bash
+    chmod o-rwx /home/volk
+    ```
+    Result:  
+    *Subtracted the rwx permissions for other users from `/home/volk`*
+  </TabItem>
+
+  <TabItem label="Recursion mode">
+    ```bash
+    chmod -R o-rwx /home/volk
+    ```
+    Result:  
+    *Subtracted the rwx permissions for other users from `/home/volk`, and all files and directories inside this folder.*
+  </TabItem>
+</Tabs>

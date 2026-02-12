@@ -1,0 +1,39 @@
+---
+title: write
+description: Viper command
+sidebar:
+    order: 27
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Writes to a file.
+
+```bash
+write [CONT] [>>/>] [PATH]
+```
+
+### Arguments
+- CONT -- specify the content you want to write to the file
+- \>> -- append mode
+- \> -- overwrite mode
+- PATH -- specify the path to the file you want to write to
+
+### Examples
+<Tabs>
+  <TabItem label="Append mode">
+    ```bash
+    write SomeStuff >> /home/volk/someFile
+    ```
+    Result:  
+    *Appended "SomeStuff" to `someFile`*
+  </TabItem>
+  <TabItem label="Overwrite mode">
+    ```bash
+    write SomeStuff > /home/volk/someFile
+    ```
+    Result:  
+    *Overwritten `someFile` with "SomeStuff"*
+  </TabItem>
+</Tabs>

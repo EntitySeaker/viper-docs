@@ -1,0 +1,36 @@
+---
+title: sniffer
+description: Viper command
+sidebar:
+    order: 40
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Starts a sniffer that will intercept SSH and FTP passwords.
+
+```bash
+sniffer (-save)
+```
+
+### Arguments
+- (-save) -- saves the encode.src
+
+### Examples
+<Tabs>
+  <TabItem label="Without -save">
+    ```bash
+    sniffer
+    ```
+    Result:  
+    *Starts a sniffer...*
+  </TabItem>
+  <TabItem label="With -save">
+    ```bash
+    sniffer -save
+    ```
+    Result:  
+    *Starts a sniffer, and saves the encode.src*
+  </TabItem>
+</Tabs>

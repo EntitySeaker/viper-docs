@@ -1,0 +1,27 @@
+---
+title: deluser
+description: Viper command
+sidebar:
+    order: 34
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">Only the root user can remove users from the computer.</Aside>
+
+### Purpose
+Removes a user from the computer.
+
+```bash
+deluser [USER]
+```
+
+### Arguments
+- USER -- specify the user you want to remove
+
+### Examples
+```bash
+deluser volk
+```
+Result:  
+*Removed the user "volk" from the computer.*

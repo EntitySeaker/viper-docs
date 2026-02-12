@@ -1,0 +1,63 @@
+---
+title: nmap
+description: Viper command
+sidebar:
+    order: 3
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Scan a host, or a randomly selected target to discover open ports and basic service information.
+
+```bash
+nmap [IP:RANDOM]
+```
+
+### Arguments
+- IP -- single IPv4 address (example: 177.58.127.159)
+- RANDOM -- a random IPv4 address (example: random)
+
+### Examples
+<Tabs>
+  <TabItem label="IPv4">
+    ```bash
+    nmap 177.58.127.159
+    ```
+    Result:
+    ```
+    IP: 177.58.127.159
+    ESSID: Astecholly
+    BSSID: A8:F5:91:92:58:E8
+
+    HOST         PORT  FORWARDED  STATE   SERVICE        VERSION
+    ----         ----  ---------  -----   -------        -------
+    192.168.0.1  0     TRUE       OPEN    kernel_router  1.0.0
+    192.168.0.2  3306  TRUE       CLOSED  employees      1.0.0
+    192.168.0.1  8080  FALSE      CLOSED  http           1.0.0
+    10.0.19.8    80    TRUE       OPEN    http           1.0.0
+    10.0.19.1    8080  FALSE      CLOSED  http           1.0.0
+    172.16.20.1  8080  FALSE      CLOSED  http           1.0.0
+    ```
+  </TabItem>
+  <TabItem label="random">
+    ```bash
+    nmap random
+    ```
+    Result:
+    ```
+    IP: 177.58.127.159
+    ESSID: Astecholly
+    BSSID: A8:F5:91:92:58:E8
+
+    HOST         PORT  FORWARDED  STATE   SERVICE        VERSION
+    ----         ----  ---------  -----   -------        -------
+    192.168.0.1  0     TRUE       OPEN    kernel_router  1.0.0
+    192.168.0.2  3306  TRUE       CLOSED  employees      1.0.0
+    192.168.0.1  8080  FALSE      CLOSED  http           1.0.0
+    10.0.19.8    80    TRUE       OPEN    http           1.0.0
+    10.0.19.1    8080  FALSE      CLOSED  http           1.0.0
+    172.16.20.1  8080  FALSE      CLOSED  http           1.0.0
+    ```
+  </TabItem>
+</Tabs>

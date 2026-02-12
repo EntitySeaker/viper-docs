@@ -1,0 +1,31 @@
+---
+title: iwlist
+description: Viper command
+sidebar:
+    order: 46
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Shows available networks.
+
+```bash
+iwlist [NETDEVICE]
+```
+
+### Arguments
+- NETDEVICE -- specify the network interface asually `wlan0`
+
+### Examples
+```bash
+iwlist wlan0
+```
+Result:
+```
+BSSID              PWR  ESSID
+2C:21:41:B6:1F:31  27%  Greillan_J30
+37:04:D8:41:31:72  31%  Axxam_FB3Y
+89:8C:BB:39:06:0C  22%  Verial_Q9SS
+91:4E:AA:45:0E:C3  11%  Ditora_32KG3
+```

@@ -1,0 +1,38 @@
+---
+title: sudo
+description: Viper command
+sidebar:
+    order: 51
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Changes the shell to another user.
+
+```bash
+sudo [USER] [PASS] (JUMPPATH)
+```
+
+### Arguments
+- USER -- specify the user you want to login to
+- PASSWORD -- specify the password of the user
+- (JUMPPATH) -- specify the path to a [jumpfile](/guides/viper/commands/jump/)
+
+### Examples
+<Tabs>
+  <TabItem label="Without jumpfile">
+    ```bash
+    sudo root root_password
+    ```
+    Result:  
+    *Logs into the root user on the host machine*
+  </TabItem>
+  <TabItem label="With jumpfile">
+    ```bash
+    sudo root root_password /home/guest/jumpfile
+    ```
+    Result:  
+    *Logs into the root user on a remote machine using the jumpfile*
+  </TabItem>
+</Tabs>

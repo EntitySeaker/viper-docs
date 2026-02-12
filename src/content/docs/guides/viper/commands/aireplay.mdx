@@ -1,0 +1,34 @@
+---
+title: aireplay
+description: Viper command
+sidebar:
+    order: 47
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Generates a file.cap file.
+
+```bash
+aireplay [BSSID] [ESSID] [PWR]
+```
+
+### Arguments
+- BSSID -- specify the BSSID of the target
+- ESSID -- specify the ESSID of the target
+- PWR -- specify the PWR of the target, this will automatically stop when the file.cap is generated.
+
+### Examples
+```bash
+iwlist 2C:21:41:B6:1F:31 Greillan_J30 27
+```
+Result:
+```
+Waiting for beacon frame (BSSID: 2C:21:41:B6:1F:31)
+Sending Authentication Request (Open system) [ACK]
+Authentication successful
+Sending Association Request
+Association successful :-)
+Read 4994 packets (got 997 ACKs)
+```

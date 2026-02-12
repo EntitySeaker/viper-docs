@@ -1,0 +1,46 @@
+---
+title: fs
+description: Viper command
+sidebar:
+    order: 19
+---
+
+### Purpose
+Lists every file in the filesystem.
+
+```bash
+fs
+```
+
+### Examples
+```bash
+fs
+```
+Result:  
+```
+»drwxr--r-- root root /
+
+――»drwxr-x--- root root /etc
+――――»-rw-r----- root root passwd
+――――»-rw-r----- root root xorg.conf
+――――»-rw-r----- root root fstab
+
+――――»drwxr-x--- root root /etc/apt
+――――――»-rw-r----- root root sources.txt
+――――――»-rwxr-xr-x root root aptcache.bin
+
+――――»drwxrwx--- root root /etc/init.d
+
+――»drwxrwx--- root root /lib
+――――»-rw-r----- root root init.so
+――――»-rw-r----- root root kernel_module.so
+――――»-rw-r----- root root net.so
+――――»-rw-r----- root root aptclient.so
+――――»-rwxr-xr-x someone someone crypto.so
+――――»-rwxr-xr-x root root metaxploit.so
+
+――»drwxr-xr-x root root /sys
+――――»-r-x------ root root xorg.sys
+――――»-rw------- root root config.sys
+――――»-rw------- root root network.cfg
+```

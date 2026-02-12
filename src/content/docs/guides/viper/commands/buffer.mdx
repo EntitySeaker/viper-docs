@@ -1,0 +1,46 @@
+---
+title: buffer
+description: Viper command
+sidebar:
+    order: 14
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Shows used commands.
+
+```bash
+buffer (LEN/ALL)
+```
+
+### Arguments
+- (LEN) -- a number of the amount of commands you want to show
+- (ALL) -- shows all commands in the buffer
+
+### Examples
+<Tabs>
+  <TabItem label="No arguments">
+    ```bash
+    buffer
+    ```
+    Result:  
+    *Shows the last 10 commands in the buffer*
+  </TabItem>
+
+  <TabItem label="A number of 20">
+    ```bash
+    buffer 20
+    ```
+    Result:  
+    *Shows the last 20 commands in the buffer*
+  </TabItem>
+
+  <TabItem label="all">
+    ```bash
+    buffer all
+    ```
+    Result:  
+    *Shows all the commands in the buffer*
+  </TabItem>
+</Tabs>

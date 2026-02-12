@@ -1,0 +1,58 @@
+---
+title: grab
+description: Viper command
+sidebar:
+    order: 55
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Grabs all banks and emails.
+
+```bash
+grab [BANK/MAIL/ALL]
+```
+
+### Arguments
+- BANK -- only grab bank accounts
+- MAIL -- only grab mail accounts
+- ALL -- grab both mail and bank accounts
+
+### Examples
+<Tabs>
+  <TabItem label="bank">
+    ```bash
+    grab bank
+    ```
+    Result:
+    ```
+    4iQMudgB-wehejonul.info:2e84dcd21b4d5494b9cae7221f411cfd
+    XFXNjYlI-wehejonul.info:74745611dbbd5fa407a8b5542b1e6902
+    ```
+  </TabItem>
+
+  <TabItem label="mail">
+    ```bash
+    grab mail
+    ```
+    Result:
+    ```
+    Kant@wehejonul.info:96445f61600b4d745798e26a9e25dc99
+    Shopkin@wehejonul.info:38822f50165945d8fa42671878e5cda3
+    ```
+  </TabItem>
+
+  <TabItem label="all">
+    ```bash
+    grab all
+    ```
+    Result:
+    ```
+    4iQMudgB-wehejonul.info:2e84dcd21b4d5494b9cae7221f411cfd
+    Kant@wehejonul.info:96445f61600b4d745798e26a9e25dc99
+    XFXNjYlI-wehejonul.info:74745611dbbd5fa407a8b5542b1e6902
+    Shopkin@wehejonul.info:38822f50165945d8fa42671878e5cda3
+    ```
+  </TabItem>
+</Tabs>

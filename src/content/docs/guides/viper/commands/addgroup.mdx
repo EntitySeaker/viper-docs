@@ -1,0 +1,28 @@
+---
+title: addgroup
+description: Viper command
+sidebar:
+    order: 36
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">Only the root user can add a user to a group.</Aside>
+
+### Purpose
+Adds a user to a group.
+
+```bash
+addgroup [USER] [GROUP]
+```
+
+### Arguments
+- USER -- specify the user you want to add a group to
+- GROUP -- specify what group you want to add to the user
+
+### Examples
+```bash
+addgroup volk root
+```
+Result:  
+*Added volk to the root group.*

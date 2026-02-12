@@ -1,0 +1,40 @@
+---
+title: wipe
+description: Viper command
+sidebar:
+    order: 42
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="danger">This action is irrevertable, and will permenantly destroy the filesystem.</Aside>
+
+### Purpose
+Completely wipes a machine.
+
+```bash
+wipe (-y)
+```
+
+### Arguments
+- -y -- bypass the "are you sure" prompt
+
+### Examples
+<Tabs>
+  <TabItem label="Without -y">
+    ```bash
+    wipe
+    ```
+    Result:  
+    *Prompts "are you sure" before wiping*
+  </TabItem>
+
+  <TabItem label="With -y">
+    ```bash
+    wipe -y
+    ```
+    Result:  
+    *Wipes the filesystem without confirmation*
+  </TabItem>
+</Tabs>

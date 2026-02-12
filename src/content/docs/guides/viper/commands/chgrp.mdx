@@ -1,0 +1,39 @@
+---
+title: chgrp
+description: Viper command
+sidebar:
+    order: 31
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Changes the group of a directory or file.
+
+```bash
+chgrp (-R) [GROUP] [PATH]
+```
+
+### Arguments
+- (-R) -- enables recursion mode
+- GROUP -- the new group of the specified file or directory
+- PATH -- the path to the file or directory to change the permissions
+
+### Examples
+<Tabs>
+  <TabItem label="Non recursion mode">
+    ```bash
+    chgrp volk /home/volk
+    ```
+    Result:  
+    *Set the new group of `/home/volk` to "volk".*
+  </TabItem>
+  
+  <TabItem label="Recursion mode">
+    ```bash
+    chgrp -R volk /home/volk
+    ```
+    Result:  
+    *Set the new group of `/home/volk` to "volk", and all files and directories inside this folder.*
+  </TabItem>
+</Tabs>

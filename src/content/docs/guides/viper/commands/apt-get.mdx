@@ -1,0 +1,136 @@
+---
+title: apt-get
+description: Viper command
+sidebar:
+    order: 58
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Purpose
+Scans every IP behind a router.
+
+```bash
+apt-get [install/search/show/delrepo/addrepo/update/upgrade]
+```
+
+### Arguments
+- install -- installs a program
+- search -- searches the repository for a program
+- show -- shows all programs in a repository
+- addrepo -- adds a repository
+- delrepo -- deletes a repository
+- update -- updates the apt cache
+- upgrade -- upgrades outdated programs
+
+### Examples
+<Tabs>
+  <TabItem label="install">
+    ```bash
+    apt-get install metaxploit.so
+    ```
+    Result:
+    ```
+    Reading package lists...
+    Downloading metaxploit.so
+    100%	749.0 KB/s	0 sec (0.3 MB of 0.3 MB copied)
+    Processing...
+    metaxploit.so installed
+    ```
+  </TabItem>
+
+  <TabItem label="search">
+    ```bash
+    apt-get search metaxploit.so
+    ```
+    Result:
+    ```
+    metaxploit.so
+
+    Library analysis tool
+    ```
+  </TabItem>
+
+  <TabItem label="show">
+    ```bash
+    apt-get show 118.224.242.190
+    ```
+    Result:
+    ```
+    AdminMonitor.exe
+    It monitors all the networks to which the user is connected, notifies if any administrator is active in the network and notifies if the user is being tracked by the administrator.
+
+    decipher
+    Decrypts certain system files and converts it to plain text.
+
+    scanlib
+    Analyze the provided library to search for vulnerabilities.
+
+    scanrouter
+    Connects to a router via its local or public IP and prints out extended information such as firewall configuration and kernel version.
+
+    sniffer
+    If the sniffer has been run on a device connected to a hub, it will capture all the data that is directed to any other device connected to the same hub.
+
+    rshell-server
+    Install a server to receive reverse shell connections.
+    In addition to the server, It is necessary to use the rshell_interface program to handle incoming connections.
+
+    rshell_interface
+    Terminal interface to interact with the installed rshell server and manage incoming connections.
+
+    metaxploit.so
+    Library analysis tool
+
+    crypto.so
+    Crypto suite library
+
+    librshell.so
+    Library used in the reverse shell service. It is automatically included with the service installer.
+    ```
+  </TabItem>
+
+  <TabItem label="addrepo">
+    ```bash
+    apt-get addrepo 118.224.242.190
+    ```
+    Result:
+    ```
+    Repository 118.224.242.190 added succesfully.
+    Launch apt with the update option to apply the changes
+    ```
+  </TabItem>
+
+  <TabItem label="delrepo">
+    ```bash
+    apt-get delrepo 118.224.242.190
+    ```
+    Result:
+    ```
+    Repository 118.224.242.190 removed succesfully.
+    Launch apt with the update option to apply the changes
+    ```
+  </TabItem>
+
+  <TabItem label="update">
+    ```bash
+    apt-get update
+    ```
+    Result:
+    ```
+    Updating package lists...
+    Updating: 118.224.242.190
+    ```
+  </TabItem>
+
+  <TabItem label="upgrade">
+    ```bash
+    apt-get upgrade
+    ```
+    Result:
+    ```
+    Reading package lists...
+    No updates needed
+    ```
+  </TabItem>
+</Tabs>
