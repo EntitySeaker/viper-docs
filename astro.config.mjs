@@ -13,7 +13,7 @@ export default defineConfig({
 				{ icon: 'github', label: 'GitHub', href: 'https://git.viper-guild.com/Viper' }
 			],
 			sidebar: [
-				{ label: 'Home', slug: 'guides/home' },
+				{ label: 'Home', slug: 'docs/home' },
 				{
 					label: 'Guides',
 					collapsed: false,
@@ -30,7 +30,7 @@ export default defineConfig({
 							label: 'Viper',
 							badge: { text: 'depricated', variant: 'danger'},
 							collapsed: true,
-							autogenerate: { directory: 'guides/viper' }
+							autogenerate: { directory: 'docs/viper' }
 						}
 					],
 				},
