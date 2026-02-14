@@ -1,0 +1,51 @@
+---
+title: Epoch
+description: GSSE API documentation.
+sidebar:
+    order: 4
+---
+
+<details>
+<summary><strong>`Epoch.getEpoch(now = null)`</strong></summary>
+
+- Returns the minutes since `01/Jan/1970 - 00:00`.
+
+**Parameters**
+- `now` *(string)*: The time to convert to epoch in the following format: `DD/Mon/YYYY - HH:MM`.
+
+**Return**
+- *(number)*: The amount of minutes passed since `01/Jan/1970 - 00:00`.
+
+**Example**
+```js
+epoch = Epoch.getEpoch(current_date)
+print(epoch)
+```
+Result:
+```
+19130368
+```
+</details>
+
+
+<details>
+<summary><strong>`Epoch.fromEpoch(ep = 0)`</strong></summary>
+
+- Returns the date from the given epoch.
+
+**Parameters**
+- `ep` *(number)*: The epoch to convert back into a date.
+
+**Return**
+- *(string)*: The the date in the following format: `DD/Mon/YYYY - HH:MM`.
+
+**Example**
+```js
+date = Epoch.fromEpoch(19130368)
+print(date)
+```
+Result:
+```
+16/May/2006 - 23:28
+```
+</details>

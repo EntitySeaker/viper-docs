@@ -1,0 +1,29 @@
+---
+title: parser
+description: GSSE API documentation.
+sidebar:
+    order: 9
+---
+
+<details>
+<summary><strong>`perm_format(permString)`</strong></summary>
+
+- Returns a list of permissions from a permission code.
+
+**Parameters**
+- `permString` *(string)*: The permission code.
+
+**Return**
+- *(list\<string\>)*: A list of permissions.
+
+**Example**
+```js
+print perm_format("777")
+print perm_format("644")
+```
+Result:
+```
+["o+rwx", "g+rwx", "u+rwx"]
+["o+r", "o-wx", "g+r", "g-wx", "u+rw", "u-x"]
+```
+</details>

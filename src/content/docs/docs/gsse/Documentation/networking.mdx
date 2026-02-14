@@ -1,0 +1,50 @@
+---
+title: networking
+description: GSSE API documentation.
+sidebar:
+    order: 8
+---
+
+<details>
+<summary><strong>`random_ip()`</strong></summary>
+
+- Returns a random IPv4 address.
+
+**Return**
+- *(string)*: random IPv4 address.
+
+**Example**
+```js
+print random_ip
+```
+Result:
+```
+204.10.25.181
+```
+</details>
+
+
+<details>
+<summary><strong>`check_service(ip, service, libVersion=null)`</strong></summary>
+
+- Returns a 1 if the service or service with version is found, 0 otherwise.
+
+**Parameters**
+- `ip` *(string)*: The IPv4 address you want to check the library on.
+- `service` *(string)*: The service you want to check.
+- `libVersion` *(string)*: An optional version you want to check.
+
+**Return**
+- *(number)*: 1 if the item is found else 0.
+
+**Example**
+```js
+if check_service("32.144.132.201", "ssh") then print("This network has ssh!")
+if check_service("32.144.132.201", "ssh", "2.6.0") then print("This network has ssh with version 2.6.0!")
+```
+Result:
+```
+This network has ssh!
+This network has ssh with version 2.6.0!
+```
+</details>

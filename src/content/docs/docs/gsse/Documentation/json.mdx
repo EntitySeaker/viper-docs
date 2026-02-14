@@ -1,0 +1,69 @@
+---
+title: Json
+description: GSSE API documentation.
+sidebar:
+    order: 5
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<details>
+<summary><strong>`Json.dump(json, c=1)`</strong></summary>
+
+- Converts the map into a json string.
+
+**Parameters**
+- `json` *(map)*: The map you want to convert into json.
+- `c` *(bool)*: Oneliner mode, 1 means oneliner, 0 means pretty print.
+
+**Return**
+- *(string)*: The map in json form.
+
+**Example**
+<Tabs>
+  <TabItem label="Onliner">
+    ```js
+    print Json.dump({"key1":{"key2":"val2"}})
+    ```
+    Result:
+    ```json
+    {"key1":{"key2":"val2"}}
+    ```
+  </TabItem>
+  <TabItem label="Pretty print">
+    ```js
+    print Json.dump({"key1":{"key2":"val2"}}, 0)
+    ```
+    Result:
+    ```json
+    {
+      "key1": {
+        "key2": "val2"
+      }
+    }
+    ```
+  </TabItem>
+</Tabs>
+</details>
+
+
+<details>
+<summary><strong>`Json.loads(json)`</strong></summary>
+
+- Converts the json string into a map
+
+**Parameters**
+- `json` *(string)*: The string to convert into a map.
+
+**Return**
+- *(string)*: The map from the json string.
+
+**Example**
+```js
+print Json.loads("{""key1"":{""key2"":""val2""}}")
+```
+Result:
+```json
+{"key1": {"key2": "val2"}}
+```
+</details>

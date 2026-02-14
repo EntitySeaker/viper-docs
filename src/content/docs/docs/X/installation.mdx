@@ -1,0 +1,192 @@
+---
+title: installation
+description: X documentation.
+sidebar:
+    order: 1
+---
+
+# X Setup Instructions
+## Getting Your Nopass X Up and Running
+
+This guide will help you set up X with rainbow tables and the exploit database.
+
+---
+
+## Installation Steps
+
+### 1. Install Core Packages
+
+Run these installation commands in order:
+
+```bash
+apt-get install x /home/USER_HOME
+apt-get install exploits /home/USER_HOME
+apt-get install bash /home/USER_HOME
+apt-get install man /home/USER_HOME
+apt-get install passwords /home/USER_HOME
+```
+
+### 2. Initial Setup
+
+**Run X at least once**, then execute the following commands in any order:
+
+```bash
+exploits
+bash
+man
+passwords
+```
+
+### 3. Initialize Rainbow Tables
+
+Initialize your password lists and rainbow tables:
+
+```bash
+rainbow -n
+```
+
+If not prompted, enable rainbow indexing on startup:
+
+```bash
+config -p
+```
+
+### 4. AI Learning (Optional)
+
+If you plan to use the AI agent, speed up learning by having it read all man pages:
+
+```bash
+ai learn all
+```
+
+### 5. System Check
+
+Verify and auto-install required core libraries:
+
+```bash
+sys check
+```
+
+**Requirements:**
+- Must be run from main session
+- Requires internet connection
+- Auto-installs: `crypto.so`, `metaxploit.so`, `aptclient.so`, `librshell.so`
+
+This ensures X has all necessary components to function properly.
+
+### 6. Configure Root Bounce Library (Optional)
+
+If you're using a root bounce library, configure it:
+
+```bash
+# Set the bounce library (can be short like "http", "ssh", etc.)
+config -v bounce_lib
+
+# Set the exploit index
+config -x
+
+# Add library to saved libs
+libs -a /path/to/library.so
+```
+
+### 7. Backup Your Database
+
+**Important:** Make regular backups of your database - bad things happen!
+
+```bash
+exp backup
+```
+
+---
+
+## About the Bash Scripts
+
+The included bash scripts demonstrate how X's macro/bash system works:
+
+- Most scripts are usable out of the box
+- Some require a working exploit database
+- Use them as learning examples for creating your own scripts
+
+---
+
+## Maintaining X
+
+Once X is set up correctly, it becomes a powerful operation script. However, **X requires regular maintenance** to keep the database updated.
+
+### Database Maintenance Commands
+
+Run these regularly to keep your exploit database current:
+
+```bash
+pacman exp router
+pacman -Sy -e -c 100
+```
+
+**For weekly maintenance**, use a higher count:
+
+```bash
+pacman -Sy -e -c 1000
+```
+
+### Security Best Practices
+
+**Always use @proxy** after you have a working database and before attacking systems.
+
+---
+
+## Getting Help
+
+### Built-in Help
+
+- **List commands**: Type `?`, `cmd`, or `help` from any object
+- **Man pages**: Most commands have documentation - `man <command>`
+- **RTFM**: Read the manual pages for detailed information
+
+### Community Support
+
+If you need help getting X up and running (and can stream):
+
+- **Discord**: DM `AwETux`
+- **Server**: X Discord - https://discord.gg/V3h6pPY5
+
+---
+
+## Important Notes
+
+### User Privileges
+
+⚠️ **X should be used as a user and not run as root.**
+
+- Running as root may cause unknown issues
+- If you choose to run as root, be aware of potential problems
+
+### File Permissions
+
+- You can `chmod` your `/` filesystem if needed
+- **Payload must be 755** to work correctly
+
+### For New Players
+
+If you are a new player or have little to no experience with Linux:
+
+**Consider using Doom instead of X**
+
+X is a powerful but complex tool that requires Linux knowledge and regular maintenance.
+
+---
+
+## Quick Start Checklist
+
+- [ ] Install all packages (x, exploits, bash, man, passwords)
+- [ ] Run each installer (exploits, bash, man, passwords)
+- [ ] Initialize rainbow tables (`rainbow -n`)
+- [ ] Run system check (`sys check`)
+- [ ] Configure bounce library (optional)
+- [ ] Backup database (`exp backup`)
+- [ ] Set up AI learning (optional - `ai learn all`)
+- [ ] Regular maintenance with pacman updates
+- [ ] Always use @proxy before attacks
+
+---
+
+**Happy Hacking! 🚀**

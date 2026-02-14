@@ -1,0 +1,46 @@
+---
+title: Installation
+description: How to install and use GSSE.
+sidebar:
+    order: 2
+---
+
+import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+### Steps
+<Steps>
+
+1. Open your browser and go to: https://git.viper-guild.com/Viper/gsse
+
+2. On the page, locate any of the modules you to use in your project and copy it's sourcecode.  
+   It's also possible to build the `main.src` sourcefile and use it as an all in one bundle.
+
+3. Paste the copied source into your Grey Hack code editor.
+
+4. Click the **Compile** button in the editor, and check the importable checkbox.
+
+5. Once compilation finishes, load the library into your project by utilizing the `import_code` function.
+
+</Steps>
+
+### Examples
+<Tabs>
+  <TabItem label="Original project">
+    ```js
+    print("Just a normal print")
+    ```
+    Result:
+    ```
+    Just a normal print
+    ```
+  </TabItem>
+  <TabItem label="Project with GSSE">
+    ```js
+    import_code("/lib/gsse.so")
+    print("Normal print but in red".color("red"))
+    ```
+    Result:  
+    *Shows "Normal print but in red" in red.*
+  </TabItem>
+</Tabs>

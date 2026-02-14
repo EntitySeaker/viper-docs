@@ -1,0 +1,305 @@
+---
+title: strings
+description: GSSE API documentation.
+sidebar:
+    order: 10
+---
+
+<details>
+<summary><strong>`color(string, colorCode)`</strong></summary>
+
+- Changes the color of a string.
+
+**Parameters**
+- `string` *(string)*: The string that needs to be colored.
+- `colorCode` *(string)*: The color code.
+  - `blue`
+  - `yellow`
+  - `black`
+  - `grey`
+  - `gray`
+  - `white`
+  - `green`
+  - `red`
+  - `ff00ff`: Color codes like these are also compatible.
+
+**Return**
+- *(string)*: The colored string.
+
+**Example**
+```js
+print(color("This is red", "red"))
+print("This is blue".color("blue"))
+```
+Result:
+```
+This is red
+This is blue
+```
+*This would ofcourse be in blue and in red.*
+</details>
+
+
+<details>
+<summary><strong>`mark(string, colorCode)`</strong></summary>
+
+- Marks a string.
+
+**Parameters**
+- `string` *(string)*: The string that needs to be marked.
+- `colorCode` *(string)*: The color code.
+  - `blue`
+  - `yellow`
+  - `black`
+  - `grey`
+  - `gray`
+  - `white`
+  - `green`
+  - `red`
+  - `ff00ff`: Color codes like these are also compatible.
+
+**Return**
+- *(string)*: The marked string.
+
+**Example**
+```js
+print(mark("This is red", "red"))
+print("This is blue".mark("blue"))
+```
+Result:
+```
+This is red
+This is blue
+```
+*This would ofcourse be marked in blue and in red.*
+</details>
+
+
+<details>
+<summary><strong>`bold(string)`</strong></summary>
+
+- Turns a string into a bold string.
+
+**Parameters**
+- `string` *(string)*: The string that needs to be bold.
+
+**Return**
+- *(string)*: The bold string.
+
+**Example**
+```js
+print(bold("This string is now bold"))
+print("This string is now bold".bold)
+```
+Result:
+```
+This string is now bold
+This string is now bold
+```
+*This would ofcourse be bold.*
+</details>
+
+
+<details>
+<summary><strong>`underline(string)|ul(string)`</strong></summary>
+
+- Adds an underline to a string.
+
+**Parameters**
+- `string` *(string)*: The string that needs to have an underline.
+
+**Return**
+- *(string)*: The string with an underline.
+
+**Example**
+```js
+print(underline("This string now has an underline"))
+print("This string now has an underline".underline)
+```
+Result:
+```
+This string now has an underline
+This string now has an underline
+```
+*This would ofcourse have an underline.*
+</details>
+
+
+<details>
+<summary><strong>`alpha(string, alphaCode)`</strong></summary>
+
+- Changes the transparancy of a string.
+
+**Parameters**
+- string (string): The string that needs to be transparent.
+- alphaCode (string): The transparacy code.
+  - aa: This is a valid transparacy code.
+
+**Return**
+- *(string)*: A transparent string.
+
+**Example**
+```js
+print(alpha("This string is now transparant", "aa"))
+print("This string is now transparant".alpha("aa"))
+```
+Result:
+```
+This string is now transparant
+This string is now transparant
+```
+*This would ofcourse be transparent.*
+</details>
+
+
+<details>
+<summary><strong>`startswith(string, prefix)`</strong></summary>
+
+- Returns 1 if the string starts with the defined prefix else returns 0.
+
+**Parameters**
+- `string` *(string)*: The string that needs to be checked.
+- `prefix` *(string)*: The prefix that needs to be checked.
+
+**Return**
+- *(number)*: 1 if the string starts with the prefix else 0.
+
+**Example**
+```js
+myString = "prefix is the start of this string"
+if myString.startswith("prefix") then print("The string starts with prefix")
+if startswith(myString, "prefix") then print("The string starts with prefix")
+```
+Result:
+```
+The string starts with prefix
+The string starts with prefix
+```
+</details>
+
+
+<details>
+<summary><strong>`endswith(string, prefix)`</strong></summary>
+
+- Returns 1 if the string ends with the defined prefix else returns 0.
+
+**Parameters**
+- `string` *(string)*: The string that needs to be checked.
+- `prefix` *(string)*: The prefix that needs to be checked.
+
+**Return**
+- *(number)*: 1 if the string ends with the prefix else 0.
+
+**Example**
+```js
+myString = "the end of this string is prefix"
+if myString.endswith("prefix") then print("The string ends with prefix")
+if endswith(myString, "prefix") then print("The string ends with prefix")
+```
+Result:
+```
+The string ends with prefix
+The string ends with prefix
+```
+</details>
+
+
+<details>
+<summary><strong>`tagstrip(string)`</strong></summary>
+
+- Strips richtext tags from a string.
+
+**Parameters**
+- `string` *(string)*: The string that needs it's richtext tags stripped.
+
+**Return**
+- *(string)*: The string without richtext tags.
+
+**Example**
+```js
+myString = "<tags>String that would have tags normally</tags>"
+print(myString.tagstrip)
+print(tagstrip(myString))
+```
+Result:
+```
+The string ends with prefix
+The string ends with prefix
+```
+</details>
+
+
+<details>
+<summary><strong>`format(string, params)`</strong></summary>
+
+- Formats a string to include the params.
+
+**Parameters**
+- `string` *(string)*: The string that needs to be formatted.
+- `params` *(list)*: A list with parameters that need to be included into the string.
+
+**Return**
+- *(string|null)*: The formatted string to include the params. Or null when something went wrong.
+
+**Example**
+```js
+myString = "{} is {} years old and lives in {}"
+print myString.format(["Bob", "27", "Europe"])
+print format("{} is {} years old and lives in {}", ["Bob", "27", "Europe"])
+```
+Result:
+```
+Bob is 27 years old and lives in Europe
+Bob is 27 years old and lives in Europe
+```
+</details>
+
+
+<details>
+<summary><strong>`printf(string, params)`</strong></summary>
+
+- Prints a formatted string that includes the params.
+
+**Parameters**
+- `string` *(string)*: The string that needs to be formatted.
+- `params` *(list)*: A list with parameters that need to be included into the string.
+
+**Return**
+- *(null)*: This returns nothing.
+
+**Example**
+```js
+printf("{} is {} years old and lives in {}", ["Bob", "27", "Europe"])
+```
+Result:
+```
+Bob is 27 years old and lives in Europe
+```
+</details>
+
+
+<details>
+<summary><strong>`format_table(csv)`</strong></summary>
+
+- Formats a string in a table format.
+
+**Parameters**
+- `csv` *(string)*: Csv that needs to be formatted to a table.
+
+**Return**
+- *(string)*: The formatted table.
+
+**Example**
+```js
+print(format_table("#,username,password\n0,admin,s3cure!\n1,user,welcome123"))
+```
+Result:
+```
++---+----------+------------+
+| # | username | password   |
++---+----------+------------+
+| 0 | admin    | s3cure!    |
+| 1 | user     | welcome123 |
++---+----------+------------+
+```
+</details>

@@ -24,22 +24,30 @@ export default defineConfig({
 				},
 				{
 					label: 'Tools',
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{
 							label: 'Viper',
 							badge: { text: 'depricated', variant: 'danger'},
 							collapsed: true,
 							autogenerate: { directory: 'docs/viper' }
+						},
+						{
+							label: 'X',
+							collapsed: true,
+							autogenerate: { directory: 'docs/X' }
 						}
 					],
 				},
 				{
 					label: 'Libraries',
-					collapsed: true,
+					collapsed: false,
 					items: [
-						// Each item here is one entry in the navigation menu.
-						// { label: 'Viper', slug: 'guides/viper' },
+						{
+							label: 'GSSE',
+							collapsed: true,
+							autogenerate: { directory: 'docs/gsse' }
+						}
 					],
 				},
 			],
